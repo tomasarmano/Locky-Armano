@@ -6,6 +6,9 @@
 body{
     background-color:rgb(183, 183, 183);
     font-family: "Roboto Condensed", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 header{
     display: flex;
@@ -294,7 +297,6 @@ input, textarea{
     width: 95%;
 }
 footer{
-    position: relative;
     width: 100%;
     background-color: grey;
     min-height: 100px;
@@ -303,6 +305,8 @@ footer{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: auto;
+    position: relative;
 }
 .social-icon{
     display: flex;
@@ -356,8 +360,12 @@ footer{
 }
 @media screen and (max-width:480px){
    footer{
+    position: fixed;
     bottom: 0;
-    position: absolute;
+   }
+   .mi-cuenta{
+    display: flex;
+    flex-direction: column;
    }
    
   

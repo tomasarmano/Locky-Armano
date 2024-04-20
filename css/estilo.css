@@ -9,6 +9,10 @@ body{
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
 }
 header{
     display: flex;
@@ -143,7 +147,6 @@ h1{
 }
 .contenido .btn:hover{
     background-color: rgb(23, 93, 103);
-
 }
 .productos{
     background-color: rgb(183, 183, 183);
@@ -154,7 +157,6 @@ h1{
     flex-wrap: wrap;
     justify-content: space-evenly;
     padding-top: 30px;
-    
 }
 .caja{
     width: 300px;
@@ -361,6 +363,9 @@ footer{
     .mi-cuenta{
         display: flex;
         flex-direction: column;
+   }
+   .hero{
+    width: 100%;
    }
 }
 @media screen and (max-width:768px){

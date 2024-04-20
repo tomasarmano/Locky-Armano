@@ -7,8 +7,8 @@ body{
     background-color:rgb(183, 183, 183);
     font-family: "Roboto Condensed", sans-serif;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 header{
     display: flex;
@@ -299,14 +299,13 @@ input, textarea{
 footer{
     width: 100%;
     background-color: grey;
-    min-height: 100px;
     padding: 20px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: auto;
-    position: relative;
+    
+    
 }
 .social-icon{
     display: flex;
@@ -359,16 +358,10 @@ footer{
     font-size: 12px;
 }
 @media screen and (max-width:480px){
-   footer{
-    margin-top: auto;
+    .mi-cuenta{
+        display: flex;
+        flex-direction: column;
    }
-   
-   .mi-cuenta{
-    display: flex;
-    flex-direction: column;
-   }
-   
-  
 }
 @media screen and (max-width:768px){
     .formulario{

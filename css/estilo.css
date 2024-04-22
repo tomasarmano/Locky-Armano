@@ -112,7 +112,7 @@ nav .icon-bars .line{
     font-size: 3rem;
 }
 .banner{
-    background-image:linear-gradient(100deg, #00000040, #00000020), url(../assets/img/banner.jpg);
+    background-image:linear-gradient(100deg, #00000040, #00000020), url(../assets/img/379285-blackangel_1920x1080.jpg);
     height: 50rem;
     background-size: cover;
     background-position: center;
@@ -216,7 +216,7 @@ main{
     flex: 1;   
 }
 .about-content h3{
-    font-size: 25px;
+    font-size: 2.7rem;
     margin-bottom: 15px;
 }
 .about-content p{

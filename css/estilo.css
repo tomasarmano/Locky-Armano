@@ -227,11 +227,15 @@ main{
     font-size: 20px;
     margin-bottom: 35px;
 }
+.products{
+    justify-content: center;
+}
 .mi-cuenta{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-evenly;  
+    padding-top: 6.5rem;
 }
 .formulario{
     min-height: 100vh;

@@ -337,11 +337,12 @@ input, textarea{
 }
 .container-img{
     position: relative;
-
+    justify-content: center;
 }
 .container-img img{
     max-width: 200px;
     height: 200px;
+    justify-content: center;
 }
 .container-img .discount{
     position: absolute;

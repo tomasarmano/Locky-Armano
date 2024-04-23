@@ -586,9 +586,6 @@ footer{
     .gallery{
         grid-template-rows: repeat(2, 20rem);
     }
-    form{
-        width: 24rem;
-    }
     .container-img{
         text-align: center;
 

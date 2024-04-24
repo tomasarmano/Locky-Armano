@@ -460,7 +460,10 @@ h2 {
   font-weight: bold;
 }
 
-.table {
+.guia-de-talles {
+  padding-top: 7rem;
+}
+.guia-de-talles .table {
   text-align: center;
   justify-content: center;
   width: 50%;

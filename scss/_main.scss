@@ -1,124 +1,125 @@
 .products{
-    justify-content: center;
-    .container{
-        max-width: 120rem;
-        margin: 0 auto;
-        .top-products{
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            margin-bottom: 3rem;
-            .heading-2{
-                text-align: center;
-                font-weight: 500;
-                font-size: 3rem;
-                text-decoration: underline rgb(40, 197, 40);
-            }
-            .container-options{
+        justify-content: center;
+        .container{
+            max-width: 120rem;
+            margin: 0 auto;
+            .top-products{
                 display: flex;
-                justify-content: center;
+                flex-direction: column;
                 gap: 2rem;
-                margin-bottom: 1rem;
-                .active{
-                    color: white;
-                    background-color: black;
+                margin-bottom: 3rem;
+                .heading-2{
+                    text-align: center;
+                    font-weight: 500;
+                    font-size: 3rem;
+                    text-decoration: underline rgb(40, 197, 40);
                 }
-                span{
-                    color: black;
-                    background-color: white;
-                    padding: 0.7rem 3rem;
-                    font-size: 1.4rem;
-                    text-transform: capitalize;
-                    border-radius: 2rem;
-                    cursor: pointer;
-                    span:hover{
+                .container-options{
+                    display: flex;
+                    justify-content: center;
+                    gap: 2rem;
+                    margin-bottom: 1rem;
+                    .active{
                         color: white;
                         background-color: black;
                     }
-                }
-            }
-            .container-products{
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-                gap: 3rem;
-                justify-content: center;
-                .card-products{
-                    background-color: white;
-                    padding: 2rem 3rem;
-                    margin: 0.5rem;
-                    border-radius: 3rem;
-                    cursor: pointer;
-                    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-                    .container-img{
-                        position: relative;
-                        img{
-                            max-width: 200px;
-                            height: 200px;
-                        }
-                        .discount{
-                            position: absolute;
-                            left: 0;
-                            background-color: grey;
+                    span{
+                        color: black;
+                        background-color: white;
+                        padding: 0.7rem 3rem;
+                        font-size: 1.4rem;
+                        text-transform: capitalize;
+                        border-radius: 2rem;
+                        cursor: pointer;
+                        span:hover{
                             color: white;
-                            padding: 0.2rem 1.2rem;
-                            border-radius: 1rem;
-                            font-size: 1.2rem;
+                            background-color: black;
                         }
                     }
-                    .content-card-products{
-                        display: grid;
-                        justify-items: center;
-                        grid-template-columns: 1fr 1fr;
-                        grid-template-rows: repeat(4, min-content);
-                        row-gap: 1rem;
-                        .star{
-                            grid-row: 1/2;
-                            grid-column: 1/-1;
-                            ion-icon{
-                                font-size: 1.3rem;
-                                color: black;
+                }
+                .container-products{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+                    gap: 3rem;
+                    justify-content: center;
+                    .card-products{
+                        background-color: white;
+                        padding: 2rem 3rem;
+                        margin: 0.5rem;
+                        border-radius: 3rem;
+                        cursor: pointer;
+                        box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+                        .container-img{
+                            position: relative;
+                            img{
+                                max-width: 200px;
+                                height: 200px;
+                            }
+                            .discount{
+                                position: absolute;
+                                left: 0;
+                                background-color: grey;
+                                color: white;
+                                padding: 0.2rem 1.2rem;
+                                border-radius: 1rem;
+                                font-size: 1.2rem;
                             }
                         }
-                        h3{
-                            grid-row: 2/3;
-                            grid-column: 1/-1;
-                            font-weight: 400;
-                            font-size: 1.6rem;
-                            margin-bottom: 1rem;
-                            cursor: pointer;
-                            h3:hover{
-                                color: grey;
-                            }
-                        }
-                        .add-cart{
-                            justify-self: start;
-                            border: 2px solid black;
-                            padding: 1rem;
-                            border-radius: 50%;
-                            cursor: pointer;
-                            transition: all 0.4s ease;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            ion-icon{
-                                color: black;
-                                font-size: 1.5rem;
-                                ion-icon:hover{
-                                    color: green;
+                        .content-card-products{
+                            display: grid;
+                            justify-items: center;
+                            grid-template-columns: 1fr 1fr;
+                            grid-template-rows: repeat(4, min-content);
+                            row-gap: 1rem;
+                            .star{
+                                grid-row: 1/2;
+                                grid-column: 1/-1;
+                                ion-icon{
+                                    font-size: 1.3rem;
+                                    color: black;
                                 }
                             }
-                        }
-                        .price{
-                            justify-self: end;
-                            align-self: center;
-                            font-size: 1.7rem;
-                            font-weight: 600;
-                            span{
-                                font-size: 1.5rem;
+                            h3{
+                                grid-row: 2/3;
+                                grid-column: 1/-1;
                                 font-weight: 400;
-                                text-decoration: line-through;
-                                color: grey;
-                                margin-left: 0.5rem;
+                                font-size: 1.6rem;
+                                margin-bottom: 1rem;
+                                cursor: pointer;
+                                h3:hover{
+                                    color: grey;
+                                }
+                            }
+                            .add-cart{
+                                justify-self: start;
+                                border: 2px solid black;
+                                padding: 1rem;
+                                border-radius: 50%;
+                                cursor: pointer;
+                                transition: all 0.4s ease;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                ion-icon{
+                                    color: black;
+                                    font-size: 1.5rem;
+                                    ion-icon:hover{
+                                        color: green;
+                                    }
+                                }
+                            }
+                            .price{
+                                justify-self: end;
+                                align-self: center;
+                                font-size: 1.7rem;
+                                font-weight: 600;
+                                span{
+                                    font-size: 1.5rem;
+                                    font-weight: 400;
+                                    text-decoration: line-through;
+                                    color: grey;
+                                    margin-left: 0.5rem;
+                                }
                             }
                         }
                     }
@@ -126,7 +127,6 @@
             }
         }
     }
-}
 .heading{
     width: 90%;
     display: flex;
@@ -232,12 +232,15 @@ h2{
     text-align: center;
     font-weight: bold;
 }
-.table{
+.guia-de-talles{
+    padding-top: 7rem;
+    .table{
     text-align: center;
     justify-content: center;
     width: 50%;
     margin-left: auto;
     margin-right: auto;
+    }
 }
 .formulario{
     min-height: 100vh;

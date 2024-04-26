@@ -3,120 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 html {
   font-size: 65.5%;
   font-family: "Lilita One", sans-serif;
 }
-
-@media screen and (max-width: 768px) {
-  .formulario {
-    padding: 30px;
-  }
-  form {
-    padding: 50px 30px;
-    width: 100%;
-  }
-  input {
-    padding: 15px;
-  }
-  nav .logo {
-    float: none;
-    width: auto;
-    justify-content: center;
-  }
-  nav .list {
-    float: none;
-    position: fixed;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    top: 100px;
-    bottom: 100%;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(25, 25, 25);
-    overflow: hidden;
-    transition: all 0.5s ease-in-out;
-  }
-  nav .list a {
-    font-size: 20px;
-  }
-  nav :checked ~ .list {
-    bottom: 0;
-  }
-  nav .icon-bars {
-    display: block;
-  }
-  html {
-    font-size: 55%;
-  }
-  .banner-content {
-    max-width: 50rem;
-    margin: 0 auto;
-    padding: 25rem 0;
-  }
-  .heading-2 {
-    font-size: 3rem;
-  }
-  .container-options {
-    align-items: center;
-  }
-  .container-options span {
-    text-align: center;
-    padding: 1rem 2rem;
-  }
-  .container-products {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  }
-  .gallery {
-    grid-template-rows: repeat(2, 15rem);
-  }
-  .formulario {
-    padding-top: 11rem;
-  }
-  .mi-cuenta {
-    padding-top: 8rem;
-  }
-}
-@media screen and (max-width: 468px) {
-  html {
-    font-size: 42.5%;
-  }
-  .banner-content {
-    max-width: 50rem;
-    padding: 22rem 0;
-  }
-  .heading-2 {
-    font-size: 2.8rem;
-  }
-  .container-options span {
-    font-size: 1.8rem;
-    padding: 1rem 1.5rem;
-    font-weight: 500;
-  }
-  .container-products {
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  }
-  .container-img .discount {
-    font-size: 2rem;
-  }
-  .content-card-product {
-    font-size: 2.2rem;
-  }
-  .gallery {
-    grid-template-rows: repeat(2, 20rem);
-  }
-  .container-img {
-    text-align: center;
-  }
-}
 body {
   background-color: rgb(158, 158, 158);
 }
-
 .container {
   max-width: 120rem;
   margin: 0 auto;
@@ -136,6 +29,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   height: 100px;
   background-color: grey;
+}
+.container header nav #toogle {
+  position: absolute;
+  top: -100px;
 }
 .container header nav .logo {
   float: left;
@@ -171,12 +68,8 @@ body {
   color: white;
   text-decoration: none;
 }
-.container header nav .list li a a:hover {
+.container header nav .list li a:hover {
   border-bottom: 4px solid rgb(40, 197, 40);
-}
-.container header nav #toogle {
-  position: absolute;
-  top: -100px;
 }
 .container header nav .icon-bars {
   display: none;
@@ -223,34 +116,32 @@ body {
 
 .products {
   justify-content: center;
-}
-.products .container {
   max-width: 120rem;
   margin: 0 auto;
 }
-.products .container .top-products {
+.products  .top-products {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-bottom: 3rem;
 }
-.products .container .top-products .heading-2 {
+.products  .top-products .heading-2 {
   text-align: center;
   font-weight: 500;
   font-size: 3rem;
   text-decoration: underline rgb(40, 197, 40);
 }
-.products .container .top-products .container-options {
+.products  .top-products .container-options {
   display: flex;
   justify-content: center;
   gap: 2rem;
   margin-bottom: 1rem;
 }
-.products .container .top-products .container-options .active {
+.products  .top-products .container-options .active {
   color: white;
   background-color: black;
 }
-.products .container .top-products .container-options span {
+.products  .top-products .container-options span {
   color: black;
   background-color: white;
   padding: 0.7rem 3rem;
@@ -259,56 +150,58 @@ body {
   border-radius: 2rem;
   cursor: pointer;
 }
-.products .container .top-products .container-options span span:hover {
+.products  .top-products .container-options span:hover {
   color: white;
   background-color: black;
 }
-.products .container .top-products .container-products {
+.products  .top-products .container-products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 3rem;
   justify-content: center;
 }
-.products .container .top-products .container-products .card-products {
+.products .top-products .container-products .card-products {
   background-color: white;
   padding: 2rem 3rem;
   margin: 0.5rem;
   border-radius: 3rem;
   cursor: pointer;
+  text-align: center;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-.products .container .top-products .container-products .card-products .container-img {
+.products .top-products .container-products .card-products .container-img {
   position: relative;
 }
-.products .container .top-products .container-products .card-products .container-img img {
+.products .top-products .container-products .card-products .container-img img {
   max-width: 200px;
   height: 200px;
 }
-.products .container .top-products .container-products .card-products .container-img .discount {
+.products .top-products .container-products .card-products .container-img .discount {
   position: absolute;
   left: 0;
+  top: 0;
   background-color: grey;
   color: white;
   padding: 0.2rem 1.2rem;
   border-radius: 1rem;
   font-size: 1.2rem;
 }
-.products .container .top-products .container-products .card-products .content-card-products {
+.products .top-products .container-products .card-products .content-card-products {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, min-content);
   row-gap: 1rem;
 }
-.products .container .top-products .container-products .card-products .content-card-products .star {
+.products .top-products .container-products .card-products .content-card-products .stars{
   grid-row: 1/2;
   grid-column: 1/-1;
 }
-.products .container .top-products .container-products .card-products .content-card-products .star ion-icon {
-  font-size: 1.3rem;
+.products .top-products .container-products .card-products .content-card-products .stars ion-icon {
+  font-size: 1.5rem;
   color: black;
 }
-.products .container .top-products .container-products .card-products .content-card-products h3 {
+.products .top-products .container-products .card-products .content-card-products h3 {
   grid-row: 2/3;
   grid-column: 1/-1;
   font-weight: 400;
@@ -316,34 +209,14 @@ body {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.products .container .top-products .container-products .card-products .content-card-products h3 h3:hover {
+.products .top-products .container-products .card-products .content-card-products h3:hover{
   color: grey;
 }
-.products .container .top-products .container-products .card-products .content-card-products .add-cart {
-  justify-self: start;
-  border: 2px solid black;
-  padding: 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.4s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.products .container .top-products .container-products .card-products .content-card-products .add-cart ion-icon {
-  color: black;
-  font-size: 1.5rem;
-}
-.products .container .top-products .container-products .card-products .content-card-products .add-cart ion-icon ion-icon:hover {
-  color: green;
-}
-.products .container .top-products .container-products .card-products .content-card-products .price {
-  justify-self: end;
-  align-self: center;
+.products .top-products .container-products .card-products .content-card-products .price {
   font-size: 1.7rem;
   font-weight: 600;
 }
-.products .container .top-products .container-products .card-products .content-card-products .price span {
+.products .top-products .container-products .card-products .content-card-products .price span{
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: line-through;
@@ -578,5 +451,135 @@ footer .text {
   margin-bottom: 10px;
   font-size: 12px;
 }
+@media screen and (max-width:480px){
+  nav .logo{
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav .list{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+  }
+  nav .list a{
+    font-size: 20px;
+  }
+  nav :checked ~ .list {
+    bottom: 0;
+  }
+  nav .icon-bars{
+    display: block;
+  }  
+  html{
+      font-size: 42.5%;
+    }
+    .banner-content {
+      max-width: 50rem;
+      padding: 22rem 0;
+    }
+    .heading-2 {
+      font-size: 2.8rem;
+    }
+    .container-options span {
+      font-size: 1.8rem;
+      padding: 1rem 1.5rem;
+      font-weight: 500;
+    }
+    .container-products {
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+    .container-img .discount {
+      font-size: 2rem;
+    }
+    .content-card-product {
+      font-size: 2.2rem;
+    }
+    .container-img {
+      text-align: center;
+    }
+}
+@media screen and (max-width:768px){
+  .formulario{
+    padding: 30px;
+  }
+  form{
+    padding: 50px 30px;
+    width: 100%;
+  }
+  input{
+    padding: 15px;
 
+  }
+  nav .logo{
+    float: none;
+    width: auto;
+    justify-content: center;
+  }
+  nav .list{
+    position: fixed;
+    z-index: 9;
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 100%;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgb(25, 25, 25);
+    overflow: hidden;
+    transition: all .5s ease-in-out;
+  }
+  nav .list a{
+    font-size: 20px;
+  }
+  nav :checked ~ .list {
+    bottom: 0;
+  }
+  nav .icon-bars{
+    display: block;
+  }
+  html {
+    font-size: 55%;
+    }
+    .banner-content {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+    }
+    .heading-2 {
+    font-size: 3rem;
+    }
+    .container-options {
+    align-items: center;
+    }
+    .container-options span {
+    text-align: center;
+    padding: 1rem 2rem;
+    }
+    .container-products{
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    }
+    .formulario {
+    padding-top: 11rem;
+    }
+    .mi-cuenta {
+    padding-top: 8rem;
+    }
+    img{
+    width: 100px;
+    height: 100px;
+    }
+}
 /*# sourceMappingURL=estilo.css.map */

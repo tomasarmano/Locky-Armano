@@ -5,55 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear cuenta</title>
     <link rel="stylesheet" href="../css/estilo.css">
-    <link rel="shortcut icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/img/logoo.png">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
 
 </head>
 <body>
-    <div class="container">
-        <header>
-            <nav>
-                <input type="checkbox" id="toogle">
-                <div class="logo">
-                    LOCKY
-                </div>
-                <ul class="list">
-                    <li><a href="./index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="guia-de-talles.html">Guia de talles</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
+  <div class="container">
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <h1 class="titulo">LOCKY</h1>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./guia-de-talles.html">Guia de Talles</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./contacto.html">Contacto</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Cuenta
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./crear-cuenta.html">Crear Cuenta</a></li>
+                      <li><a class="dropdown-item" href="./iniciar-sesion.html">Iniciar Sesión</a></li>
+                      <li><a class="dropdown-item" href="./mi-cuenta.html">Mi Cuenta</a></li>
+                    </ul>
+                  </li>
                 </ul>
-                <label for="toogle" class="icon-bars">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </label>
-            </nav>
-        </header>
+              </div>
+            </div>
+      </nav>
+    </header>
+  </div>
+  <main class="cuenta">
+    <form>
+        <h2>Crear Cuenta</h2>
+        <div>
+          <label for="name"></label>
+          <input type="text" name="name" placeholder="Nombre" required>
         </div>
-    <main>
-        <form action="">
-            <fieldset>
-                <legend>Crear Cuenta</legend>
-                <div>
-                    <label for="email"></label>
-                    <input type="text" name="email" placeholder="Email">
-                </div>
-                <div>
-                    <label for="password"></label>
-                    <input type="password" name="Contraseña" placeholder="Contraseña" required>
-                </div>
-                <div>
-                    <input type="submit" value="Crear cuenta">
-                </div>
-            </fieldset>
-        </form>
-
-    </main>
+        <div>
+          <label for="username"></label>
+          <input type="text" name="username" placeholder="Nombre de Usuario" required>
+        </div>
+        <div>
+          <label for="age"></label>
+          <input type="text" name="age" placeholder="Edad" required>
+        </div>
+        <div>
+          <label for="email"></label>
+          <input type="text" name="email" placeholder="Email" required>
+        </div>
+        <div>
+          <label for="password"></label>
+          <input type="password" name="Contraseña" placeholder="Repetir Contraseña" required>
+        </div>
+        <div>
+          <label for="password"></label>
+          <input type="password" name="Contraseña" placeholder="Repetir Contraseña" required>
+        </div>
+        <div>
+          <input class="btn-dos" type="submit" value="Crear cuenta">
+        </div>
+    </form>
+  </main>
     <footer>
         <ul class="social-icon">
             <li class="icon-elem">

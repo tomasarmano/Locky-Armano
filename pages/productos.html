@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
-    <link rel="shortcut icon" href="../assets/img/apple-touch-icon.png">
+    <link rel="shortcut icon" href="../assets/img/logoo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -12,119 +13,261 @@
 <body>
     <div class="container">
         <header>
-            <nav>
-                <input type="checkbox" id="toogle">
-                <div class="logo">
-                    LOCKY
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <h1 class="titulo">LOCKY</h1>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./guia-de-talles.html">Guia de Talles</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./nosotros.html">Nosotros</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contacto</a>
+                      </li>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Cuenta
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="./crear-cuenta.html">Crear Cuenta</a></li>
+                          <li><a class="dropdown-item" href="./iniciar-sesion.html">Iniciar Sesión</a></li>
+                          <li><a class="dropdown-item" href="./mi-cuenta.html">Mi Cuenta</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <ul class="list">
-                    <li><a href="../index.html">Inicio</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="guia-de-talles.html">Guia de talles</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
-                    <li><a href="mi-cuenta.html">Mi Cuenta</a></li>
-                </ul>
-                <label for="toogle" class="icon-bars">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </label>
-            </nav>
+              </nav>
         </header>
         </div>
-    <main class="products">
-        <section class="container top-products">
-            <h2 class="heading-2">Mejores Productos</h2>
-            <div class="container-options">
-                <span class="active">Destacados</span>
-                <span>Más recientes</span>
-                <span>Más vendidos</span>
-            </div>
-            <div class="container-products">
-                <div class="card-products">
-                    <div class="container-img">
-                        <img src="../assets/img/collar.jpeg" alt="collar">
-                        <span class="discount">-10%</span>                    
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star-outline"></ion-icon>
+        <main class="products">
+            <section class="container top-products">
+                <h2 class="heading-2">Mejores Productos</h2>
+                <div class="container-options">
+                    <span class="active">Destacados</span>
+                    <span>Más recientes</span>
+                    <span>Más vendidos</span>
+                </div>
+                <div class="container-products">
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/collar.jpeg" alt="collar">
+                            <span class="discount">-10%</span>                    
                         </div>
-                        <h3>Collar</h3>
-                        <span class="add-cart">
-                            <ion-icon name="bag-handle-outline"></ion-icon>
-                        </span>
-                        <p class="price">$4.500 <span>$5.000</span></p>
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-outline"></ion-icon>
+                            </div>
+                            <h3>Collar Amarillo</h3>
+                            <p class="price">$4.500 <span>$5.000</span></p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/correa2.png" alt="correa 2">
+                        </div>
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>                        
+                            </div>
+                            <h3>Correa Corazones</h3>
+                            <p class="price">$3.600</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/correa.jpg" alt="correa">
+                            <span class="discount">-10%</span>                    
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                            </div>
+                            <h3>Correa Rosa 5M</h3>
+                            <p class="price">$5.400 <span>$6.000</span></p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/pretal.jpg" alt="pretal">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>                        
+                            </div>
+                            <h3>Pretal "Graffiti"</h3>
+                            <p class="price">$8.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/alimento.jpg" alt="alimento-balanceado">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Alimento para Perros Adultos</h3>
+                            <p class="price">$48.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/alimento2.jpg" alt="alimento-balanceado">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>                        
+                            </div>
+                            <h3>Alimento para Perros Medianos Cachorros</h3>
+                            <p class="price">$38.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/alimento3.avif" alt="alimento-balanceado">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star-half-outline"></ion-icon>                        
+                            </div>
+                            <h3>Alimento para Perros Pequeños</h3>
+                            <p class="price">$63.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/alimento4.webp" alt="alimento-balanceado">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Alimento para Perros Medianos</h3>
+                            <p class="price">$89.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/ropagokuparaperrospequenos.jpg" alt="ropa-para-perros">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Buzo Goku Perro Pequeños</h3>
+                            <p class="price">$18.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/capaakatsukiparagatos.webp" alt="ropa-para-gatos">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Capa Akatsuki para Gatos</h3>
+                            <p class="price">$22.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/buzosharkparaperrospequenos.jpg" alt="ropa-para-perros">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Buzo Shark Perro Pequeños</h3>
+                            <p class="price">$20.000</p>
+                        </div>
+                    </div>
+                    <div class="card-products">
+                        <div class="container-img">
+                            <img src="../assets/img/capanarutohokageparagatos.webp" alt="ropa-para-gatos">
+                        </div>
+                    
+                        <div class="content-card-product">
+                            <div class="stars">
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>
+                                <ion-icon name="star"></ion-icon>                        
+                            </div>
+                            <h3>Capa Naruto Hokage para Gatos</h3>
+                            <p class="price">$21.000</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card-products">
-                    <div class="container-img">
-                        <img src="../assets/img/correa2.png" alt="correa 2">
-                    </div>
-                    <div class="content-card-product">
-                        <div class="stars">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star-half-outline"></ion-icon>                        
-                        </div>
-                        <h3>Correa 2</h3>
-                        <span class="add-cart">
-                            <ion-icon name="bag-handle-outline"></ion-icon>
-                        </span>
-                        <p class="price">$3.600</p>
-                    </div>
-                </div>
-                <div class="card-products">
-                    <div class="container-img">
-                        <img src="../assets/img/correa.jpg" alt="correa">
-                        <span class="discount">-10%</span>                    
-                    </div>
-                
-                    <div class="content-card-product">
-                        <div class="stars">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                        </div>
-                        <h3>Correa</h3>
-                        <span class="add-cart">
-                            <ion-icon name="bag-handle-outline"></ion-icon>
-                        </span>
-                        <p class="price">$5.400 <span>$6.000</span></p>
-                    </div>
-                </div>
-                <div class="card-products">
-                    <div class="container-img">
-                        <img src="../assets/img/pretal.jpg" alt="pretal">
-                    </div>
-                
-                    <div class="content-card-product">
-                        <div class="stars">
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star"></ion-icon>
-                            <ion-icon name="star-half-outline"></ion-icon>                        
-                        </div>
-                        <h3>Pretal</h3>
-                        <span class="add-cart">
-                            <ion-icon name="bag-handle-outline"></ion-icon>
-                        </span>
-                        <p class="price">$8.000</p>
-                    </div>
-                </div>
-            </div>
-       </section>
-    </main>
+           </section>
+        </main>
     <footer>
         <ul class="social-icon">
             <li class="icon-elem">

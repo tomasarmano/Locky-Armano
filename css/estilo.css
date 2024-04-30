@@ -30,9 +30,8 @@ body {
   height: 100px;
   background-color: grey;
 }
-.container header nav #toogle {
-  position: absolute;
-  top: -100px;
+.container header nav #toogle{
+  display: none;
 }
 .container header nav .logo {
   float: left;
@@ -56,41 +55,13 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.container header nav .list li {
-  list-style: none;
-}
-.container header nav .list li a {
-  display: block;
-  text-transform: uppercase;
-  padding: 15px;
-  font-size: 12px;
-  font-weight: bold;
-  color: white;
-  text-decoration: none;
-}
-.container header nav .list li a:hover {
-  border-bottom: 4px solid rgb(40, 197, 40);
-}
-.container header nav .icon-bars {
-  display: none;
-  position: absolute;
-  right: 5%;
-  top: 50%;
-  transform: translateY(-50);
-  cursor: pointer;
-}
-.container header nav .icon-bars .line {
-  width: 30px;
-  height: 5px;
-  background-color: white;
-  margin: 5px;
-  border-radius: 3px;
-  transition: all 3s ease-in-out;
-  cursor: pointer;
-}
+
 .container header .banner {
-  background-image: linear-gradient(100deg, rgba(0, 0, 0, 0.2509803922), rgba(0, 0, 0, 0.1254901961)), url(../assets/img/379285-blackangel_1920x1080.jpg);
-  height: 50rem;
+  background-image:  url(../assets/img/379285-blackangel_1920x1080.jpg);
+  max-height: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -129,7 +100,8 @@ body {
   text-align: center;
   font-weight: 500;
   font-size: 3rem;
-  text-decoration: underline rgb(40, 197, 40);
+  color: white;
+  text-decoration: underline rgb(249, 44, 198);
 }
 .products  .top-products .container-options {
   display: flex;
@@ -156,8 +128,9 @@ body {
 }
 .products  .top-products .container-products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 1rem;
+  flex-direction: column;
   justify-content: center;
 }
 .products .top-products .container-products .card-products {
@@ -186,22 +159,23 @@ body {
   border-radius: 1rem;
   font-size: 1.2rem;
 }
-.products .top-products .container-products .card-products .content-card-products {
+.products .top-products .container-products .card-products .content-card-product {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, min-content);
   row-gap: 1rem;
+  text-align: center;
 }
-.products .top-products .container-products .card-products .content-card-products .stars{
+.products .top-products .container-products .card-products .content-card-product .stars{
   grid-row: 1/2;
   grid-column: 1/-1;
 }
-.products .top-products .container-products .card-products .content-card-products .stars ion-icon {
+.products .top-products .container-products .card-products .content-card-product .stars ion-icon {
   font-size: 1.5rem;
   color: black;
 }
-.products .top-products .container-products .card-products .content-card-products h3 {
+.products .top-products .container-products .card-products .content-card-product h3 {
   grid-row: 2/3;
   grid-column: 1/-1;
   font-weight: 400;
@@ -209,21 +183,37 @@ body {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.products .top-products .container-products .card-products .content-card-products h3:hover{
-  color: grey;
+.products .top-products .container-products .card-products .content-card-product h3:hover{
+  border-bottom: 4px solid rgb(249, 44, 198);
 }
-.products .top-products .container-products .card-products .content-card-products .price {
+.products .top-products .container-products .card-products .content-card-product .price {
   font-size: 1.7rem;
   font-weight: 600;
+  padding-left: 6rem;
 }
-.products .top-products .container-products .card-products .content-card-products .price span{
+.products .top-products .container-products .card-products .content-card-product .price span{
   font-size: 1.5rem;
   font-weight: 400;
   text-decoration: line-through;
   color: grey;
-  margin-left: 0.5rem;
 }
-
+.gallery{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 30rem);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+.gallery img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  text-align: center;
+}
+.gallery-img-4{
+  grid-column: 2/4;
+  grid-row: 1/3;
+}
 .heading {
   width: 90%;
   display: flex;
@@ -251,24 +241,27 @@ body {
 }
 .heading p {
   font-size: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 10px;
 }
 
 .container-dos {
   width: 90%;
   margin: 0 auto;
   padding: 10px 20px;
+  text-align: center;
 }
 .container-dos .about {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .container-dos .about .about-image {
   flex: 1;
   margin-right: 40px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 .container-dos .about .about-content {
   flex: 1;
@@ -282,34 +275,35 @@ body {
   line-height: 1.5;
 }
 
-.mi-cuenta {
+.cuenta {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
   padding-top: 6.5rem;
 }
-.mi-cuenta form {
+.cuenta form {
   padding: 50px 55px;
   text-align: center;
+  align-items: center;
   width: 340px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   margin-bottom: 20px;
 }
-.mi-cuenta form h2 {
+.cuenta form h2 {
   font-size: 30px;
   color: 0;
   margin-bottom: 25px;
   text-align: center;
   font-weight: bold;
 }
-.mi-cuenta form label {
+.cuenta form label {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 15px;
 }
-.mi-cuenta form input, .mi-cuenta form textarea {
+.cuenta form input, .mi-cuenta form textarea {
   padding: 17px 25px;
   border-radius: 25px;
   margin-bottom: 20px;
@@ -317,14 +311,21 @@ body {
   color: black;
   outline: none;
 }
-.mi-cuenta form .btn-dos {
+.cuenta form .btn-dos {
   font-size: 16px;
   border: 0;
   border-radius: 25px;
   cursor: pointer;
   width: 95%;
 }
-
+.cuenta form ul{
+  list-style: none;
+}
+.cuenta form ul li a{
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgb(23, 6, 215);
+}
 h2 {
   font-size: 30px;
   color: 0;
@@ -356,7 +357,7 @@ h2 {
   text-align: center;
   width: 340px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 15px;
   margin-bottom: 20px;
 }
 .formulario form h2 {
@@ -418,8 +419,8 @@ footer .social-icon .icon-elem .icon {
   display: inline-block;
   margin: 0 10px;
 }
-footer .social-icon .icon-elem .icon .icon:hover {
-  border-bottom: 4px solid rgb(40, 197, 40);
+footer .social-icon .icon-elem .icon:hover {
+  border-bottom: 4px solid rgb(249, 44, 198);
   cursor: pointer;
 }
 footer .menu {
@@ -441,7 +442,7 @@ footer .menu .menu-elem .menu-icon {
   margin: 5px 10px;
   opacity: 0.5;
 }
-footer .menu .menu-elem .menu-icon .menu-icon:hover {
+footer .menu .menu-elem .menu-icon:hover {
   opacity: 1;
 }
 footer .text {
@@ -452,64 +453,35 @@ footer .text {
   font-size: 12px;
 }
 @media screen and (max-width:480px){
-  nav .logo{
-    float: none;
-    width: auto;
-    justify-content: center;
-  }
-  nav .list{
-    position: fixed;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    top: 100px;
-    bottom: 100%;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(25, 25, 25);
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-  }
-  nav .list a{
-    font-size: 20px;
-  }
-  nav :checked ~ .list {
-    bottom: 0;
-  }
-  nav .icon-bars{
-    display: block;
-  }  
   html{
-      font-size: 42.5%;
-    }
-    .banner-content {
-      max-width: 50rem;
-      padding: 22rem 0;
-    }
-    .heading-2 {
-      font-size: 2.8rem;
-    }
-    .container-options span {
-      font-size: 1.8rem;
-      padding: 1rem 1.5rem;
-      font-weight: 500;
-    }
-    .container-products {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-    .container-img .discount {
-      font-size: 2rem;
-    }
-    .content-card-product {
-      font-size: 2.2rem;
-    }
-    .container-img {
-      text-align: center;
-    }
+    font-size: 42.5%;
+  }
+  .banner-content {
+    max-width: 50rem;
+    padding: 22rem 0;
+  }
+  .heading-2 {
+    font-size: 2.8rem;
+  }
+  .container-options span {
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+  }
+  .container-products {
+    display: block;
+  }
+  .container-img .discount {
+    font-size: 2rem;
+  }
+  .content-card-product {
+    font-size: 2.2rem;
+  }
+  .container-img {
+    text-align: center;
+  }
 }
-@media screen and (max-width:768px){
+@media (max-width:768px){
   .formulario{
     padding: 30px;
   }
@@ -519,67 +491,41 @@ footer .text {
   }
   input{
     padding: 15px;
-
-  }
-  nav .logo{
-    float: none;
-    width: auto;
-    justify-content: center;
-  }
-  nav .list{
-    position: fixed;
-    z-index: 9;
-    left: 0;
-    right: 0;
-    top: 100px;
-    bottom: 100%;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: space-evenly;
-    background-color: rgb(25, 25, 25);
-    overflow: hidden;
-    transition: all .5s ease-in-out;
-  }
-  nav .list a{
-    font-size: 20px;
-  }
-  nav :checked ~ .list {
-    bottom: 0;
-  }
-  nav .icon-bars{
-    display: block;
   }
   html {
     font-size: 55%;
-    }
-    .banner-content {
+  }
+  .banner-content {
     max-width: 50rem;
     margin: 0 auto;
     padding: 25rem 0;
-    }
-    .heading-2 {
+  }
+  .heading-2 {
     font-size: 3rem;
-    }
-    .container-options {
+  }
+  .container-options {
     align-items: center;
-    }
-    .container-options span {
+  }
+  .container-options span {
     text-align: center;
     padding: 1rem 2rem;
-    }
-    .container-products{
-    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-    .formulario {
+  }
+  img{
+    min-width: 100%;
+    height: 100%;   
+  }
+  .formulario {
     padding-top: 11rem;
-    }
-    .mi-cuenta {
+  }
+  .mi-cuenta {
     padding-top: 8rem;
-    }
-    img{
+  }
+  img{
     width: 100px;
     height: 100px;
-    }
+  }
+  .gallery{
+    grid-template-rows: repeat(2, 20rem);
+  }
 }
 /*# sourceMappingURL=estilo.css.map */

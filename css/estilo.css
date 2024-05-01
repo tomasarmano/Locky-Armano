@@ -10,6 +10,17 @@ html {
 body {
   background-color: rgb(158, 158, 158);
 }
+.container-fluid{
+  margin: 1rem;
+}
+.navbar-nav{
+  margin: 22rem;
+  font-size: 1.1rem;
+}
+.titulo{
+  font-weight: bold;
+  font-size: 4rem;
+}
 .container {
   max-width: 120rem;
   margin: 0 auto;

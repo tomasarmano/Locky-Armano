@@ -1,6 +1,13 @@
+:root {
+    --primary-color: rgb(158, 158, 158);
+    --secondary-color: rgb(128, 128, 128);
+    --white: #ffffff;
+    --black: #000000;
+    --pink: rgb(249, 44, 198);
+}
 footer{
     width: 100%;
-    background-color: grey;
+    background-color: var(--secondary-color);
     padding: 20px 50px;
     display: flex;
     justify-content: center;
@@ -16,12 +23,12 @@ footer{
         .icon-elem{
             list-style: none;
             .icon{
-                color: white;
+                color: var(--white);
                 font-size: 25px;
                 display: inline-block;
                 margin: 0 10px;
                 .icon:hover{
-                    border-bottom: 4px solid rgb(40, 197, 40);
+                    border-bottom: 4px solid var(--pink);
                     cursor: pointer;
                 }
             }
@@ -37,20 +44,20 @@ footer{
         .menu-elem{
             list-style: none;
             .menu-icon{
-                color: white;
+                color: var(--white);
                 font-size: 18px;
                 display: inline-block;
                 text-decoration: none;
                 margin: 5px 10px;
                 opacity: 0.5;
-                .menu-icon:hover{
+                :hover{
                     opacity: 1;
                 }
             }
         }
     }
     .text{
-        color: white;
+        color: var(--white);
         text-align: center;
         margin-top: 15px;
         margin-bottom: 10px;

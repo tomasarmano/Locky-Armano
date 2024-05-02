@@ -1,3 +1,10 @@
+:root {
+  --primary-color: rgb(158, 158, 158);
+  --secondary-color: rgb(128, 128, 128);
+  --white: #ffffff;
+  --black: #000000;
+  --pink: rgb(249, 44, 198);
+}
 *{
     margin: 0;
     padding: 0;
@@ -8,109 +15,82 @@ html{
     font-family: "Lilita One", sans-serif;
 }
 @media screen and (max-width: 768px) {
-    .formulario {
-      padding: 30px;
-    }
-    form {
-      padding: 50px 30px;
-      width: 100%;
-    }
-    input {
-      padding: 15px;
-    }
-    nav .logo {
-      float: none;
-      width: auto;
-      justify-content: center;
-    }
-    nav .list {
-      float: none;
-      position: fixed;
-      z-index: 9;
-      left: 0;
-      right: 0;
-      top: 100px;
-      bottom: 100%;
-      width: auto;
-      height: auto;
-      flex-direction: column;
-      justify-content: space-evenly;
-      background-color: rgb(25, 25, 25);
-      overflow: hidden;
-      transition: all 0.5s ease-in-out;
-    }
-    nav .list a {
-      font-size: 20px;
-    }
-    nav :checked ~ .list {
-      bottom: 0;
-    }
-    nav .icon-bars {
-      display: block;
-    }
-    html {
-      font-size: 55%;
-    }
-    .banner-content {
-      max-width: 50rem;
-      margin: 0 auto;
-      padding: 25rem 0;
-    }
-    .heading-2 {
-      font-size: 3rem;
-    }
-    .container-options {
-      align-items: center;
-    }
-    .container-options span {
-      text-align: center;
-      padding: 1rem 2rem;
-    }
-    .container-products {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-    .gallery {
-      grid-template-rows: repeat(2, 15rem);
-    }
-    .formulario {
-      padding-top: 11rem;
-    }
-    .mi-cuenta {
-      padding-top: 8rem;
-    }
+  .formulario{
+    padding: 30px;
   }
+  form{
+    padding: 50px 30px;
+    width: 100%;
+  }
+  input{
+    padding: 15px;
+  }
+  html {
+    font-size: 55%;
+  }
+  .banner-content {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+  }
+  .heading-2 {
+    font-size: 3rem;
+  }
+  .container-options {
+    align-items: center;
+  }
+  .container-options span {
+    text-align: center;
+    padding: 1rem 2rem;
+  }
+  img{
+    min-width: 100%;
+    height: 100%;   
+  }
+  .formulario {
+    padding-top: 11rem;
+  }
+  .mi-cuenta {
+    padding-top: 8rem;
+  }
+  img{
+    width: 100px;
+    height: 100px;
+  }
+  .gallery{
+    grid-template-rows: repeat(2, 20rem);
+  }
+}
 @media screen and (max-width: 468px) {
-    html {
-      font-size: 42.5%;
-    }
-    .banner-content {
-      max-width: 50rem;
-      padding: 22rem 0;
-    }
-    .heading-2 {
-      font-size: 2.8rem;
-    }
-    .container-options span {
-      font-size: 1.8rem;
-      padding: 1rem 1.5rem;
-      font-weight: 500;
-    }
-    .container-products {
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-    }
-    .container-img .discount {
-      font-size: 2rem;
-    }
-    .content-card-product {
-      font-size: 2.2rem;
-    }
-    .gallery {
-      grid-template-rows: repeat(2, 20rem);
-    }
-    .container-img {
-      text-align: center;
-    }
+  html{
+    font-size: 42.5%;
   }
+  .banner-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+  }
+  .heading-2 {
+    font-size: 2.8rem;
+  }
+  .container-options span {
+    font-size: 1.8rem;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+  }
+  .container-products {
+    display: block;
+  }
+  .container-img .discount {
+    font-size: 2rem;
+  }
+  .content-card-product {
+    font-size: 2.2rem;
+  }
+  .container-img {
+    text-align: center;
+  }
+}
 @import "_body.scss";
 @import "_header.scss";
 @import "_main.scss";

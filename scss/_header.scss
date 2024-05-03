@@ -5,61 +5,44 @@
     --black: #000000;
     --pink: rgb(249, 44, 198);
   }
-.container{
-    max-width: 120rem;
-    margin: 0 auto;
-    header{
-        display: flex;
-        background-color: var(--primary-color);
-        flex-direction: column;
-        padding-bottom: 30px;
-        nav{
-            position: absolute;
-            z-index: 10;
-            left: 0;
-            right: 0;
-            padding: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            height: 100px;
-            background-color: var(--secondary-color);
-            .container-fluid{
-                margin: 1rem;
-                .titulo{
-                    font-weight: bold;
-                    font-size: 4rem;
-                    .navbar-nav{
-                        margin: 22rem;
-                        font-size: 1.1rem;
+header{
+    nav{
+        .titulo{
+            color: var(--white);
+        }
+        .collapse {
+            ul{
+                li{
+                    .nav-link{
+                        color: var(--white);
+                        :hover{
+                            border-bottom: 4px solid var(--pink);
+                        }
                     }
                 }
             }
-        }
-        .banner{
-            background-image:  url(../assets/img/379285-blackangel_1920x1080.jpg);
-            max-height: 100%;
-            min-width: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            background-position: center;
+        }    
+    }
+    .header-content{
+        background-image: url(../assets/img/379285-blackangel_1920x1080.jpg);
+        background-position: center ;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
             text-align: center;
-            .banner-content{
-                max-width: 90rem;
-                text-align: center;
-                margin: 0 auto;
-                padding: 25rem 0;
-                h2{
-                    font-size: 2.7rem;
-                    color: var(--black);
-                    margin-bottom: 1rem;
-                    font-weight: bold;
-                }
-                p{
-                    color: var(--black);
-                    font-size: 1.3rem;
-                    font-weight: 500;
-                    line-height: 1.2;
-                }
+            .h2{
+                font-size: 4rem;
+                color: var(--black);
+            }   
+            .txt-p{
+                margin-top: 20px;
+                font-size: 1.5rem;
+                color: var(--black);
             }
         }
     }

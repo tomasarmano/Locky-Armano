@@ -441,6 +441,17 @@ footer .text {
   font-size: 12px;
 }
 @media screen and (max-width: 768px) {
+  .navbar-collapse{
+    overflow: hidden;
+    transition: all 1s;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: var(--primary-color);
+    text-align: center;
+    justify-content: center;
+  }
   .formulario {
     padding: 30px;
   }

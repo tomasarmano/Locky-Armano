@@ -1,26 +1,29 @@
 :root {
-    --primary-color: rgb(158, 158, 158);
+    --primary-color: rgb(160, 160, 160);
     --secondary-color: rgb(128, 128, 128);
     --white: #ffffff;
     --black: #000000;
     --pink: rgb(249, 44, 198);
   }
 header{
-    nav{
-        .titulo{
+    .navbar{
+        background-color: var(--secondary-color);
+        .container-fluid{
+            .titulo{
             color: var(--white);
-        }
-        .collapse {
-            ul{
-                li{
-                    .nav-link{
-                        color: var(--white);
-                        :hover{
+            }
+            .collapse {
+                ul{
+                    li{
+                        .nav-link{
+                            color: var(--white);
+                            :hover{
                             border-bottom: 4px solid var(--pink);
+                            }
                         }
                     }
                 }
-            }
+            }    
         }    
     }
     .header-content{

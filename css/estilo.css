@@ -1,5 +1,5 @@
 :root {
-  --primary-color: rgb(158, 158, 158);
+  --primary-color: rgb(160, 160, 160);
   --secondary-color: rgb(128, 128, 128);
   --white: #ffffff;
   --black: #000000;
@@ -17,13 +17,16 @@ html {
 body {
   background-color: var(--primary-color);
 }
+header .navbar{
+  background-color: var(--secondary-color);
+}
 header nav .titulo {
   color: var(--white);
 }
 header nav .collapse ul li .nav-link {
   color: var(--white);
 }
-header nav .collapse ul li .nav-link :hover {
+header nav .collapse ul li .nav-link:hover {
   border-bottom: 4px solid var(--pink);
 }
 header .header-content {
@@ -31,6 +34,7 @@ header .header-content {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -53,6 +57,7 @@ header .header-content .container .txt-p {
   justify-content: center;
   max-width: 120rem;
   margin: 0 auto;
+  padding-top: 2rem;
 }
 .products .top-products {
   display: flex;
@@ -88,7 +93,7 @@ header .header-content .container .txt-p {
   border-radius: 2rem;
   cursor: pointer;
 }
-.products .top-products .container-options span :hover {
+.products .top-products .container-options span:hover {
   color: var(--white);
   background-color: var(--black);
 }
@@ -149,7 +154,7 @@ header .header-content .container .txt-p {
   margin-bottom: 1rem;
   cursor: pointer;
 }
-.products .top-products .container-products .card-products .content-card-product h3 :hover {
+.products .top-products .container-products .card-products .content-card-product h3:hover {
   border-bottom: 4px solid var(--pink);
 }
 .products .top-products .container-products .card-products .content-card-product .price {
@@ -189,7 +194,7 @@ header .header-content .container .txt-p {
   flex-direction: column;
   text-align: center;
   margin: 20px auto;
-  padding-top: 100px;
+  padding-top: 2rem;
 }
 .heading h2 {
   font-size: 50px;
@@ -242,7 +247,8 @@ header .header-content .container .txt-p {
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
-  padding-top: 8.5rem;
+  padding-top: 2rem;
+  background-color: var(--primary-color);
 }
 .cuenta form {
   padding: 50px 55px;
@@ -280,6 +286,10 @@ header .header-content .container .txt-p {
   cursor: pointer;
   width: 95%;
 }
+.cuenta form .btn-dos:hover{
+  color: var(--white);
+  background-color: rgb(46, 46, 216);
+}
 .cuenta form li {
   list-style: none;
 }
@@ -293,7 +303,8 @@ h2 {
 }
 
 .guia-de-talles {
-  padding-top: 7rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .guia-de-talles .table {
   text-align: center;
@@ -308,7 +319,7 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 8.5rem;
+  padding-top: 2rem;
 }
 .formulario form {
   padding: 50px 50px;
@@ -380,7 +391,7 @@ footer .social-icon .icon-elem .icon {
   display: inline-block;
   margin: 0 10px;
 }
-footer .social-icon .icon-elem .icon .icon:hover {
+footer .social-icon .icon-elem .icon:hover {
   border-bottom: 4px solid var(--pink);
   cursor: pointer;
 }
@@ -403,7 +414,7 @@ footer .menu .menu-elem .menu-icon {
   margin: 5px 10px;
   opacity: 0.5;
 }
-footer .menu .menu-elem .menu-icon :hover {
+footer .menu .menu-elem .menu-icon:hover {
   opacity: 1;
 }
 footer .text {

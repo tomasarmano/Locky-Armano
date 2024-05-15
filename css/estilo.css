@@ -1,32 +1,36 @@
 :root {
-  --primary-color: rgb(160, 160, 160);
+  --primary-color: rgb(158, 158, 158);
   --secondary-color: rgb(128, 128, 128);
   --white: #ffffff;
   --black: #000000;
   --pink: rgb(249, 44, 198);
 }
+
+html {
+  font-size: 65.5%;
+  font-family: "Lilita One", sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-html {
-  font-size: 65.5%;
-  font-family: "Lilita One", sans-serif;
-}
+
 body {
   background-color: var(--primary-color);
 }
-header .navbar{
+
+header .navbar {
   background-color: var(--secondary-color);
 }
-header nav .titulo {
+header .navbar .container-fluid .titulo {
   color: var(--white);
 }
-header nav .collapse ul li .nav-link {
+header .navbar .container-fluid .collapse ul li .nav-link {
   color: var(--white);
 }
-header nav .collapse ul li .nav-link:hover {
+header .navbar .container-fluid .collapse ul li .nav-link:hover {
   border-bottom: 4px solid var(--pink);
 }
 header .header-content {
@@ -34,7 +38,6 @@ header .header-content {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -52,7 +55,9 @@ header .header-content .container .txt-p {
   margin-top: 20px;
   font-size: 1.5rem;
   color: var(--black);
+  backdrop-filter: blur(1.2px);
 }
+
 .products {
   justify-content: center;
   max-width: 120rem;
@@ -169,23 +174,20 @@ header .header-content .container .txt-p {
   color: var(--secondary-color);
 }
 .products .gallery {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 30rem);
-  gap: 1.5rem;
-  margin-bottom: 3rem;
+  display: grid; 
+  grid-auto-flow: column; 
+  grid-auto-columns: 1fr; 
+  grid-auto-rows: 1fr; 
+  grid-template-columns: 1fr 1fr ; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 15px 10px;
 }
 .products .gallery img {
   width: 100%;
-  height: 100%;
+  height: 40rem;
   object-fit: cover;
   text-align: center;
 }
-.products .gallery .gallery-img-4 {
-  grid-column: 2/4;
-  grid-row: 1/3;
-}
-
 .heading {
   width: 90%;
   display: flex;
@@ -248,7 +250,6 @@ header .header-content .container .txt-p {
   align-items: center;
   justify-content: space-evenly;
   padding-top: 2rem;
-  background-color: var(--primary-color);
 }
 .cuenta form {
   padding: 50px 55px;
@@ -286,7 +287,7 @@ header .header-content .container .txt-p {
   cursor: pointer;
   width: 95%;
 }
-.cuenta form .btn-dos:hover{
+.cuenta form .btn-dos:hover {
   color: var(--white);
   background-color: rgb(46, 46, 216);
 }
@@ -304,7 +305,6 @@ h2 {
 
 .guia-de-talles {
   padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 .guia-de-talles .table {
   text-align: center;
@@ -365,6 +365,7 @@ h2 {
   cursor: pointer;
   width: 95%;
 }
+
 footer {
   width: 100%;
   background-color: var(--secondary-color);
@@ -391,7 +392,7 @@ footer .social-icon .icon-elem .icon {
   display: inline-block;
   margin: 0 10px;
 }
-footer .social-icon .icon-elem .icon:hover {
+footer .social-icon .icon-elem .icon .icon:hover {
   border-bottom: 4px solid var(--pink);
   cursor: pointer;
 }
@@ -425,18 +426,41 @@ footer .text {
   font-size: 12px;
 }
 @media screen and (max-width: 768px) {
-  .formulario {
+  .navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+  }
+  .products{
+    padding-top: 6rem;
+  }
+  .guia-de-talles{
+    padding-top: 6rem;
+  }
+  .heading{
+    padding-top: 6rem;
+  }
+  .cuenta{
+    padding-top: 6rem;
+  }
+  .formulario{
     padding: 30px;
   }
-  form {
+  form{
     padding: 50px 30px;
     width: 100%;
   }
-  input {
+  input{
     padding: 15px;
   }
   html {
     font-size: 55%;
+  }
+  .header-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 25rem 0;
   }
   .heading-2 {
     font-size: 3rem;
@@ -448,27 +472,68 @@ footer .text {
     text-align: center;
     padding: 1rem 2rem;
   }
-  img {
+  img{
     min-width: 100%;
-    height: 100%;
+    height: 100%;   
   }
   .formulario {
     padding-top: 11rem;
   }
   .mi-cuenta {
-    padding-top: 8rem;
+    padding-top: 6rem;
   }
-  img {
+  img{
     width: 100px;
     height: 100px;
   }
   .gallery {
-    grid-template-rows: repeat(2, 20rem);
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 15px 10px; 
+    grid-template-areas: 
+      "img1 img4"
+      "img2 img5"
+      "img3 img6"; 
+    width: 100%; 
+    height: 100%; 
   }
+  .img1 { grid-area: img1; }
+  .img2 { grid-area: img2; }
+  .img3 { grid-area: img3; }
+  .img4 { grid-area: img4; }
+  .img5 { grid-area: img5; }
+  .img6 { grid-area: img6; }
 }
 @media screen and (max-width: 468px) {
-  html {
+  html{
     font-size: 42.5%;
+  }
+  .banner-content {
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 25rem 0;
+  }
+  .navbar{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+  }
+  .products{
+    padding-top: 6rem;
+  }
+  .guia-de-talles{
+    padding-top: 6rem;
+  }
+  .heading{
+    padding-top: 6rem;
+  }
+  .cuenta{
+    padding-top: 6rem;
   }
   .heading-2 {
     font-size: 2.8rem;
@@ -490,5 +555,27 @@ footer .text {
   .container-img {
     text-align: center;
   }
+  .gallery {
+    display: grid; 
+    grid-auto-flow: column; 
+    grid-auto-columns: 1fr; 
+    grid-auto-rows: 1fr; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 15px 10px; 
+    grid-template-areas: 
+      "img1 img4"
+      "img2 img5"
+      "img3 img6"; 
+    width: 100%; 
+    height: 100%; 
+  }
+  .img1 { grid-area: img1; }
+  .img2 { grid-area: img2; }
+  .img3 { grid-area: img3; }
+  .img4 { grid-area: img4; }
+  .img5 { grid-area: img5; }
+  .img6 { grid-area: img6; }
 }
+
 /*# sourceMappingURL=estilo.css.map */
